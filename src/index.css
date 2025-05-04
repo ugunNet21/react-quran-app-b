@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Noto Sans', sans-serif;
+  --font-arabic: 'Noto Sans Arabic', sans-serif;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-50;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+.ayat-transition {
+  transition: background-color 0.3s ease;
+}
+
+.arabic-text {
+  line-height: 2;
+  font-size: 1.75rem;
+  font-family: var(--font-arabic);
+}
+
+.latin-text {
+  line-height: 1.5;
+  font-size: 1rem;
+  font-style: italic;
+  color: theme('colors.neutral.600');
+}
+
+.translation-text {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-500 text-white hover:bg-secondary-600;
+  }
+  
+  .btn-outline {
+    @apply border border-primary-500 text-primary-500 hover:bg-primary-50;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-neutral-800 rounded-xl shadow-md p-4;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 
+    bg-white dark:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.neutral.100');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.primary.300');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.primary.500');
+}
+
+/* Dark mode scrollbar */
+.dark::-webkit-scrollbar-track {
+  background: theme('colors.neutral.800');
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: theme('colors.primary.700');
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.primary.500');
+}
