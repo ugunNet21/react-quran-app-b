@@ -10,15 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
+    "dexie": "^3.2.4",
+    "dexie-react-hooks": "^1.1.7",
+    "framer-motion": "^11.1.9",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.22.3",
-    "dexie": "^3.2.4",
-    "dexie-react-hooks": "^1.1.7",
-    "clsx": "^2.1.0",
     "tailwind-merge": "^2.2.1",
-    "framer-motion": "^11.1.9",
     "use-sound": "^4.0.1",
     "zustand": "^4.5.2"
   },
@@ -36,6 +36,7 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
-    "vite": "^5.4.2"
+    "vite": "^5.4.2",
+    "vite-plugin-pwa": "^1.0.0"
   }
 }
